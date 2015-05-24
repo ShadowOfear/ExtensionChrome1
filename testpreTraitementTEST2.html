@@ -26,7 +26,8 @@ ki.sectionAnchor%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.ve
 <meta name="ResourceLoaderDynamicStyles" content="" />
 <script type="text/javascript" src="preTraitement.js"></script>
 <script type="text/javascript" src="POSTagger.js"></script>
-<script type="text/javascript" src="extensionGC_graphV2.js"></script>
+<!-- <script type="text/javascript" src="extensionGC_graphV2.js"></script> -->
+ <script type="text/javascript" src="extensionGC_graph_TopicRank.js"></script>
 <script type="text/javascript" src="lexer.js"></script>
 <script type="text/javascript" src="test.js"></script>
 <script type="text/javascript" src="lexicon.js_"></script>
@@ -421,7 +422,6 @@ var longueurTableauDeMot= 0;
 				  tableauFinal[level1]= [];
 				var boucle = 0; //pk ne pas déclarer boucle avant, evite les multiples variables
 				for (var celluleMot = 0 ; celluleMot < longueurTableauDeMot; celluleMot ++){
-					
 					if(tableauDeMot[celluleMot][1] != "CD"){
 					tableauFinal[level1][boucle] = tableauDeMot[celluleMot][0];
 					tableauFinal[level1][boucle+1] = tableauDeMot[celluleMot][1];					
