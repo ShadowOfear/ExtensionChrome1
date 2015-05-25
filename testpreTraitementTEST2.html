@@ -26,7 +26,7 @@ ki.sectionAnchor%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.ve
 <meta name="ResourceLoaderDynamicStyles" content="" />
 <script type="text/javascript" src="preTraitement.js"></script>
 <script type="text/javascript" src="POSTagger.js"></script>
-<!-- <script type="text/javascript" src="extensionGC_graphV2.js"></script> -->
+<script type="text/javascript" src="extensionGC_graphV2.js"></script>
  <script type="text/javascript" src="extensionGC_graph_TopicRank.js"></script>
 <script type="text/javascript" src="lexer.js"></script>
 <script type="text/javascript" src="test.js"></script>
@@ -434,9 +434,11 @@ var longueurTableauDeMot= 0;
 		
 var noeud;
 noeud = GraphTR(tableauFinal);
-
-
 var topDIX = TextRank(noeud);
+alert (topDIX);
+
+noeud = GraphTopicR(tableauFinal);
+topDIX = TextRank(noeud);
 alert (topDIX);
 		</script>
 
