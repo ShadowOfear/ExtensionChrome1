@@ -1,0 +1,74 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+-->
+<html>
+<head>
+  <title>WiKey Finder Popup</title>
+  <link rel="stylesheet" type="text/css" href="popup.css" media="all"/>
+  <meta charset = "UTF-8"/>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+
+	<meta charset="UTF-8">
+  </head>
+  <body>
+	<table>
+	<caption><h1>WiKey Finder</h1></caption>
+		<tr>
+			<td>
+				<label>Nombre de mots-clef:</label>
+				<div class="container">
+				  <div class="slider">
+					<input type="range" id="rangeInput" name="rangeInput" min="1" max="10" value="10">
+					<p id="nbmots"></p>
+				  </div>
+				</div>
+			</td>
+			<td rowspan="2">
+				<textarea rows="11" cols="35" name="key_word_area" disabled="true" id="wordarea" style="resize:none">
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="algoswitch">
+					<input type="checkbox" name="algoswitch" class="algoswitch-checkbox" id="myalgoswitch" checked>
+					<label class="algoswitch-label" for="myalgoswitch">
+						<span class="algoswitch-inner">
+							<span class="algoswitch-active" id="toTopic"><span class="algoswitch-switch">Text Rank</span></span>
+							<span class="algoswitch-inactive" id="toText"><span class="algoswitch-switch">Topic Rank</span></span>
+						</span>
+					</label>
+				</div>
+			</td>
+		</tr>
+	</table>
+		
+		
+	<button id="afficher" class="turquoise-flat-button">Afficher les mots clés</button>
+	<button id="bouttonContent" class="sun-flower-button">Souligner</button>
+	<button id = "recherche" class="belize-hole-flat-button">Google</button>
+	<button id = "reload" class="carrot-flat-button">Actualiser</button>
+	
+	<div class="onoffswitch">
+		<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+		<label class="onoffswitch-label" for="myonoffswitch">
+				<span class="onoffswitch-inner">
+				<span class="onoffswitch-active" id="gettingInactive"><span class="onoffswitch-switch">ON</span></span>
+				<span class="onoffswitch-inactive" id="gettingActive"><span class="onoffswitch-switch">OFF</span></span>
+			</span>
+		</label>
+	</div>
+	
+	<script src="popup.js" type="text/javascript"></script>
+</body>
+</html>
+
